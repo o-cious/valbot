@@ -34,11 +34,11 @@ Gui,2:Font,CBlue,Fixedsys
 Gui,2:Color,Black
 Gui,2:Color, EEAA99
 Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundBlack vC3
-Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB3 gStart,ON
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB3 gStart,ON LIL BRO
 Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundBlack vC2
-Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB2 gStart,HOLD MODE
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB2 gStart,HOLD GANG
 Gui,2:Add,Progress, xp yp wp hp Disabled BackgroundRED vC1
-Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB1 gStart,OFF
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB1 gStart,OFF LIL BRO
 Gui,2: Show, x10 y1 w200 h60
 Gui 2:+LastFound +ToolWindow +AlwaysOnTop -Caption
 WinSet, TransColor, EEAA99
