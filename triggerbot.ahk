@@ -11,8 +11,8 @@ SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
 CoordMode, Pixel, Screen
-SoundBeep, 300, 200
-SoundBeep, 400, 200
+SoundBeep, 100, 100
+SoundBeep, 100, 100
 
 ;HOTKEYS
 key_stay_on	:= 	"F1"		; self explanatory		
@@ -30,15 +30,15 @@ pixel_color	:=	0xFEFE40	; yellow="0xFEFE40", purple="0xA145A3"
 tap_time	:=	200		; Delay in ms between shots when triggered
 
 ;DO NOT TOUCH?
-Gui,2:Font,Cdefault,Fixedsys
+Gui,2:Font,CBlue,Fixedsys
 Gui,2:Color,Black
 Gui,2:Color, EEAA99
-Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundGreen vC3
-Gui,2:Add,Text, xp yp wp hp cYellow BackgroundTrans Center 0x200 vB3 gStart,ON
-Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundGreen vC2
-Gui,2:Add,Text, xp yp wp hp cYellow BackgroundTrans Center 0x200 vB2 gStart,HOLD MODE
+Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundBlack vC3
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB3 gStart,ON
+Gui,2:Add,Progress, x10 y20 w100 h23 Disabled BackgroundBlack vC2
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB2 gStart,HOLD MODE
 Gui,2:Add,Progress, xp yp wp hp Disabled BackgroundRED vC1
-Gui,2:Add,Text, xp yp wp hp cYellow BackgroundTrans Center 0x200 vB1 gStart,OFF
+Gui,2:Add,Text, xp yp wp hp cWhite BackgroundTrans Center 0x200 vB1 gStart,OFF
 Gui,2: Show, x10 y1 w200 h60
 Gui 2:+LastFound +ToolWindow +AlwaysOnTop -Caption
 WinSet, TransColor, EEAA99
@@ -58,12 +58,12 @@ return
 start:
 gui,2:submit,nohide
 terminate:
-SoundBeep, 300, 200
-SoundBeep, 200, 200
-Sleep 400
+SoundBeep, 100, 100
+SoundBeep, 100, 100
+Sleep 100
 exitapp
 stayon:
-SoundBeep, 300, 200
+SoundBeep, 100, 100
 settimer, loop2, off
 settimer, loop1, 100
 GuiControl,2: hide,B1
@@ -74,7 +74,7 @@ GuiControl,2: show,B3
 GuiControl,2: show,C3
 return
 holdmode:
-SoundBeep, 300, 200
+SoundBeep, 100, 100
 settimer, loop1, off
 settimer, loop2, 100
 GuiControl,2: hide,B1
@@ -85,7 +85,7 @@ GuiControl,2: hide,B3
 GuiControl,2: hide,C3
 return
 offloop:
-SoundBeep, 300, 200
+SoundBeep, 100, 100
 settimer, loop1, off
 settimer, loop2, off
 GuiControl,2: show,B1
@@ -115,7 +115,7 @@ PixelSearch()
 return
 
 fastclick:
-SoundBeep, 300, 200
+SoundBeep, 100, 100
 toggle := !toggle
 return
 #if toggle
